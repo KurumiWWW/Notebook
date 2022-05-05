@@ -1,6 +1,5 @@
 module.exports = {
-  title: "Hello VuePress",
-  description: "Just playing around",
+  title: "KurumiW's Notebook",
   themeConfig: {
     sidebar: ["/", "/foo/"],
   },
