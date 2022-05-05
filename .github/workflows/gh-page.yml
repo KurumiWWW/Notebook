@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: KurumiWWW/Notebook@master
+        uses: actions/checkout@master
 
       - name: vuepress-deploy
         uses: KurumiWWW/Notebook@gh-pages
