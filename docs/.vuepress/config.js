@@ -2,6 +2,9 @@ module.exports = {
   title: "KurumiW's Notebook",
   base: "/Notebook/",
   theme: "reco",
+  head: [
+    ['link', { rel: 'shortcut icon', type: 'image/png', href: "/logo.png" }]
+  ],
   themeConfig: {
     authorAvatar: 'https://avatars.githubusercontent.com/u/58627883?v=4',
     noFoundPageByTencent: false,
@@ -22,10 +25,10 @@ module.exports = {
     },
     friendLink: [
       {
-        title: 'vuepress-theme-reco',
-        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        logo: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        link: 'https://vuepress-theme-reco.recoluan.com'
+        title: 'ForteScarlet',
+        desc: '接口小子',
+        logo: "https://avatars.githubusercontent.com/u/40045247?v=4",
+        link: 'https://github.com/ForteScarlet'
       },
     ]
   },
