@@ -1,8 +1,8 @@
 ---
 title: Webpack5.0 学习笔记
-date: 2021
+date: 2021-01-01
 author: KurumiW
-location: Jinan  
+location: Jinan
 ---
 
 # Webpack
@@ -392,7 +392,7 @@ rules: [
   const toml = require("toml");
   const yaml = require("yaml");
   const json5 = require("json5");
-  
+
   module.exports = {
     /*...*/
     rules: [
@@ -622,7 +622,11 @@ import(/* webpackPrefetch: true* / "./math.js").then(()=>{})
 打包后，页面头部标签里会加入一个`link`元素，预获取了打包后的`math.js`
 
 ```html
-<link rel="prefetch" as="script" href="http://127.0.0.1:5500/8.%E4%BB%A3%E7%A0%81%E5%88%86%E7%A6%BB/build/math.bundle.js">
+<link
+  rel="prefetch"
+  as="script"
+  href="http://127.0.0.1:5500/8.%E4%BB%A3%E7%A0%81%E5%88%86%E7%A6%BB/build/math.bundle.js"
+/>
 ```
 
 效果：在页面内容加载完毕，网络空闲时，加载`math.bundle.js`
@@ -635,11 +639,7 @@ import(/* webpackPrefetch: true* / "./math.js").then(()=>{})
 
 效果类似懒加载。
 
-
-
-**最优方案：使用prefetch预获取**
-
-
+**最优方案：使用 prefetch 预获取**
 
 ## 九、缓存
 
@@ -652,8 +652,8 @@ import(/* webpackPrefetch: true* / "./math.js").then(()=>{})
 利用`contenthash`:根据文件内容生成`hash`来修改文件名
 
 ```js
-output:{
-	filename: "[name].[contenthash].js"
+output: {
+  filename: "[name].[contenthash].js";
 }
 ```
 
@@ -688,8 +688,8 @@ output:{
 服务器静态资源存放路径：影响打包后的`index.html`文件中路径的引入（默认使用相对路径引入）
 
 ```js
-output:{
-  publicPath:"http://localhost:8080/"
+output: {
+  publicPath: "http://localhost:8080/";
 }
 ```
 
@@ -697,13 +697,13 @@ output:{
 
 配置中的`module.exports`可以定义为函数，有默认的参数，参数为当前的环境变量
 
-````js
-module.exports = env => {
+```js
+module.exports = (env) => {
   return {
     // 各种webpack配置
-  }
-}
-````
+  };
+};
+```
 
 在输入命令行进行打包时，用户可以自己输入环境变量
 
@@ -725,12 +725,11 @@ npx webpack --env production --env name="apple"
 根据用户输入的环境变量，对配置做出相应的改变，如打包模式
 
 ```js
-mode: env.production? "production" : "development"
+mode: env.production ? "production" : "development";
 ```
 
-> 注意：此时生产环境打包后，js代码并没有被折叠，是因为引入了CssMinimizerPlugin。需要再引入一个js的minimizer插件：terser-webpack-plugin并进行实例化
+> 注意：此时生产环境打包后，js 代码并没有被折叠，是因为引入了 CssMinimizerPlugin。需要再引入一个 js 的 minimizer 插件：terser-webpack-plugin 并进行实例化
 
 ### 3.拆分配置文件
 
-如果所有环境都在同一个配置文件中，就只能通过2中的方法，使用逻辑判断语句，判断环境变量达到修改配置的目的，如果各环境打包方式区别很大，这样的方法管理起来会十分棘手，就需要针对各环境，对配置文件进行拆分。
-
+如果所有环境都在同一个配置文件中，就只能通过 2 中的方法，使用逻辑判断语句，判断环境变量达到修改配置的目的，如果各环境打包方式区别很大，这样的方法管理起来会十分棘手，就需要针对各环境，对配置文件进行拆分。
