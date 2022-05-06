@@ -1,42 +1,34 @@
 module.exports = {
   title: "KurumiW's Notebook",
   base: "/Notebook/",
-  theme: "@vuepress/theme-blog",
-  configureWebpack: {
-    resolve: {
-      alias: {
-        "@": "assets",
+  theme: "reco",
+  themeConfig: {
+    authorAvatar: 'https://avatars.githubusercontent.com/u/58627883?v=4',
+    noFoundPageByTencent: false,
+    type: 'blog',
+    subSidebar: 'auto',
+    nav: [{
+      text: "KurumiWWW",
+      icon: "reco-github",
+      link: "https://github.com/KurumiWWW"
+    }],
+    blogConfig: {
+      category: {
+        text: "分类"
+      },
+      tag: {
+        text: "标签"
       },
     },
+    friendLink: [
+      {
+        title: 'vuepress-theme-reco',
+        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
+        logo: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+        link: 'https://vuepress-theme-reco.recoluan.com'
+      },
+    ]
   },
-  themeConfig: {
-    footer: {
-      contact: [
-        {
-          type: "github",
-          link: "https://github.com/KurumiWWW",
-        },
-      ],
-    },
-    nav: [
-      { text: "文章", link: "/" },
-      { text: "标签", link: "/tag/" },
-    ],
-    globalPagination: {
-      prevText: "<",
-      nextText: ">",
-      lengthPerPage: "10",
-      layout: "Pagination",
-    },
-  },
-  directories: [
-    {
-      id: "post",
-      dirname: "_posts",
-      path: "/",
-      title: "笔记",
-    },
-  ],
   locales: {
     "/": {
       lang: "zh-CN",

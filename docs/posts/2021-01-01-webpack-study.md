@@ -2,8 +2,9 @@
 title: Webpack5.0 学习笔记
 date: 2021-01-01
 author: KurumiW
-tags:
+categories:
   - 前端
+tags:
   - JavaScript
   - Webpack
 summary: Webpack5：前端资源打包工具
@@ -47,10 +48,10 @@ index.js
 #### 2.5 Mode
 
 模式：指示 Webpack 使用对应的模式进行配置
-|模式|描述|特点|
-|-|-|-|
-|development 开发模式|会将 `process.env.NODE_ENV` 的值设为 `development`。启用 `NamedChunksPlugin` 和 `NamedModulesPlugin`。|可以让代码进行本地调试的环境|
-|production 生产模式|会将 `process.env.NODE_ENV` 的值设为 `production`。启用` FlagDependencyUsagePlugin`, `FlagIncludedChunksPlugin`, `ModuleConcatenationPlugin`, `NoEmitOnErrorsPlugin`, `OccurrenceOrderPlugin`, `SideEffectsFlagPlugin` 和 `UglifyJsPlugin`.|可以让代码优化上线的环境|
+| 模式                 | 描述                                                                                                                                                                                                                                        | 特点                         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| development 开发模式 | 会将 `process.env.NODE_ENV` 的值设为 `development`。启用 `NamedChunksPlugin` 和 `NamedModulesPlugin`。                                                                                                                                      | 可以让代码进行本地调试的环境 |
+| production 生产模式  | 会将 `process.env.NODE_ENV` 的值设为 `production`。启用` FlagDependencyUsagePlugin`, `FlagIncludedChunksPlugin`, `ModuleConcatenationPlugin`, `NoEmitOnErrorsPlugin`, `OccurrenceOrderPlugin`, `SideEffectsFlagPlugin` 和 `UglifyJsPlugin`. | 可以让代码优化上线的环境     |
 
 ## 二、初次使用
 
