@@ -10,11 +10,37 @@ module.exports = {
     },
   },
   themeConfig: {
-    nav: [{ text: "GitHub", link: "https://github.com/KurumiWWW" }],
+    footer: {
+      contact: [
+        {
+          type: "github",
+          link: "https://github.com/KurumiWWW",
+        },
+      ],
+    },
+    nav: [
+      { text: "文章", link: "/" },
+      { text: "标签", link: "/tag/" },
+    ],
+    globalPagination: {
+      prevText: "<",
+      nextText: ">",
+      lengthPerPage: "10",
+      layout: "Pagination",
+    },
   },
+  directories: [
+    {
+      id: "post",
+      dirname: "_posts",
+      path: "/",
+      title: "笔记",
+    },
+  ],
   locales: {
     "/": {
       lang: "zh-CN",
     },
   },
+  plugins: ["@vuepress/back-to-top"],
 };

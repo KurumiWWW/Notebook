@@ -2,7 +2,11 @@
 title: Webpack5.0 学习笔记
 date: 2021-01-01
 author: KurumiW
-location: Jinan
+tags:
+  - 前端
+  - JavaScript
+  - Webpack
+summary: Webpack5：前端资源打包工具
 ---
 
 # Webpack
@@ -58,7 +62,7 @@ index.js
 
 - 开发环境
 
-```shell
+```sh
 webpack ./src/index.js -o ./build/built.js --mode=development
 ```
 
@@ -66,7 +70,7 @@ webpack ./src/index.js -o ./build/built.js --mode=development
 
 - 生产环境
 
-```shell
+```sh
 webpack ./src/index.js -o ./build/built_product.js --mode=production
 ```
 
@@ -131,7 +135,7 @@ module.exports = {
 
 打包时使用命令：
 
-```shell
+```sh
 webpack --watch
 ```
 
@@ -141,13 +145,13 @@ webpack --watch
 
 安装 `webpack-dev-server`
 
-```shell
+```sh
 npm i webpack-dev-server -D
 ```
 
 使用`webpack-dev-server`启动项目
 
-```shell
+```sh
 npx webpack-dev-server
 ```
 
@@ -300,7 +304,7 @@ rules: [
 
 > 安装插件 mini-css-extract-plugin
 
-```shell
+```sh
 npm i mini-css-extract-plugin -D
 ```
 
@@ -331,7 +335,7 @@ module.exports = {
 
 > 安装插件 css-minimizer-webpack-plugin
 
-```shell
+```sh
 npm i css-minimizer-webpack-plugin -D
 ```
 
@@ -368,7 +372,7 @@ rules: [
 
 - XML：安装 `xml-loader`
 
-  ```shell
+  ```sh
   npm i xml-loader -D
   ```
 
@@ -376,7 +380,7 @@ rules: [
 
 - CSV/TSV：安装`csv-loader`
 
-  ```shell
+  ```sh
   npm i csv-loader -D
   ```
 
@@ -384,7 +388,7 @@ rules: [
 
 - toml/yaml/json5: 安装`toml` `yaml` `json5`
 
-  ```shell
+  ```sh
   npm i toml yaml json5 -D
   ```
 
@@ -421,7 +425,7 @@ rules: [
 
 安装：
 
-```shell
+```sh
 npm install -D babel-loader @babel/core @babel/preset-env
 ```
 
@@ -707,7 +711,7 @@ module.exports = (env) => {
 
 在输入命令行进行打包时，用户可以自己输入环境变量
 
-```shell
+```sh
 npx webpack --env production --env name="apple"
 ```
 
