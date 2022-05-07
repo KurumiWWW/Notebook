@@ -14,5 +14,8 @@
     "vuepress": "2.0.0-beta.39",
     "vuepress-theme-reco": "2.0.0-beta.5"
   },
+  "resolutions": {
+    "vite": "2.8.6"
+  },
   "main": "index.js"
 }
