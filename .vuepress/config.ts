@@ -5,6 +5,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   title: "KurumiW's Notebook",
   base: "/Notebook/",
   theme: "reco",
+  head: [["link", { rel: "shortcut icon", href: "/Notebook/logo.png" }]],
   themeConfig: {
     style: "@vuepress-reco/style-default",
     logo: "/logo.png",
@@ -12,7 +13,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     authorAvatar: "https://avatars.githubusercontent.com/u/58627883?v=4",
     navbar: [
       { text: "首页", link: "/" },
-      { text: "分类", link: "/categories/qianduan/1/" },
+      { text: "分类", link: "/categories/Frontend/1/" },
       { text: "标签", link: "/tags/JavaScript/1/" },
     ],
     valineConfig: {
@@ -25,5 +26,4 @@ export default defineUserConfig<DefaultThemeOptions>({
       // hideComments: true // 隐藏评论
     },
   },
-  // debug: true,
 });

@@ -3,7 +3,7 @@ title: Webpack5.0 学习笔记
 date: 2021-01-01
 author: KurumiW
 categories:
-  - 前端
+  - Frontend
 tags:
   - JavaScript
   - Webpack
