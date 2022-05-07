@@ -1,8 +1,6 @@
 .vuepress/.cache
 .vuepress/.temp
 node_modules
-.github
-.github/*
 deploy.sh
 
 /docs/.vuepress/dist
