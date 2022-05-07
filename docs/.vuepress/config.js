@@ -36,7 +36,7 @@ module.exports = {
     vssueConfig: {
       platform: "github",
       owner: "KurumiWWW",
-      repo: "notebook-vssue",
+      repo: "Notebook",
       clientId: "5f9d55b48879d99dd8df",
       clientSecret: "58500744d77331b9c2a3f32429c67bf65241c404",
     },
