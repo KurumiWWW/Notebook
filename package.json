@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-pwa": "^2.0.0-beta.43",
+    "vuepress-plugin-demo-code": "^2.0.0-beta.1",
     "vuepress-plugin-smooth-scroll": "^0.0.10"
   }
 }

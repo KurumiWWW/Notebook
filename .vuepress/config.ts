@@ -6,6 +6,16 @@ export default defineUserConfig<DefaultThemeOptions>({
   base: "/Notebook/",
   theme: "reco",
   head: [["link", { rel: "shortcut icon", href: "/Notebook/logo.png" }]],
+  plugins: [
+    [
+      "demo-code",
+      {
+        minHeight: 0,
+        showText: "展开代码",
+        hideText: "折叠代码",
+      },
+    ],
+  ],
   themeConfig: {
     style: "@vuepress-reco/style-default",
     logo: "/logo.png",
