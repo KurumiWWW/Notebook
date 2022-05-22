@@ -11,12 +11,13 @@ export default defineUserConfig<DefaultThemeOptions>({
       "demo-code",
       {
         minHeight: 0,
-        showText: "展开代码",
-        hideText: "折叠代码",
+        showText: "",
+        hideText: "",
       },
     ],
   ],
   themeConfig: {
+    vuePreviewsDir: "./.vuepress/vue-previews",
     style: "@vuepress-reco/style-default",
     logo: "/logo.png",
     author: "KurumiWWW",

@@ -2,5 +2,6 @@
 .vuepress/.temp
 node_modules
 deploy.sh
+desktop.ini
 
 /docs/.vuepress/dist
