@@ -8,14 +8,14 @@ jobs:
     name: Deploy-doc
     runs-on: ubuntu-latest
     steps:
+      - name: Get into docs
+        run: cd docs
       # 检出仓库代码
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
           cache: npm
-      - name: Get into docs
-        run: cd docs
       - name: Install dependencies
         run: npm i
       - name: Build website
