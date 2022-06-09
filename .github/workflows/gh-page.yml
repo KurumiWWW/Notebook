@@ -14,7 +14,8 @@ jobs:
         with:
           node-version: 16.x
           cache: npm
-
+      - name: Get into docs
+        run: cd docs
       - name: Install dependencies
         run: npm i
       - name: Build website
@@ -26,5 +27,5 @@ jobs:
         with:
           personal_token: ${{ secrets.ACCESS_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./.vuepress/dist
+          publish_dir: ./docs/.vuepress/dist
           force_orphan: true
