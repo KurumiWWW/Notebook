@@ -1,0 +1,31 @@
+name: Build and Deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy-doc:
+    if: github.repository == 'KurumiWWW/Notebook'
+    name: Deploy-doc
+    runs-on: ubuntu-latest
+    steps:
+      # 检出仓库代码
+      - uses: actions/checkout@v2
+      - name: Get into docs
+        run: cd docs
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build website
+        run: npm run build
+
+      # https://github.com/marketplace/actions/github-pages-action
+      - name: Push to doc repository
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./.vuepress/dist
+          force_orphan: true
